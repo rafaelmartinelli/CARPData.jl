@@ -9,7 +9,7 @@ function load(instance::Symbol)
     n = values[1]
     vertices = Vector{Vertex{Edge}}()
     for v in 1:n
-        push!(vertices, Vertex{Edge}(v, Vector{Edge}()))
+        push!(vertices, Vertex{Edge}(v, Vector{Edge}(), Vector{Edge}()))
     end
 
     m = values[2]
@@ -18,16 +18,23 @@ function load(instance::Symbol)
 
     i = 3
     for e = 1:m
-        from = values[i] + 1
-        to = values[i + 1] + 1
+        from = vertices[values[i] + 1]
+        to = vertices[values[i + 1] + 1]
         cost = values[i + 2]
         demand = values[i + 3]
-
-        edge = Edge(e, vertices[from], vertices[to], cost, demand)
-        push!(edges, edge)
-        if isRequired(edge) push!(requireds, edge) end
-
         i += 4
+
+        edge = Edge(e, from, to, cost, demand)
+        
+        push!(edges, edge)
+        push!(from.edges, edge)
+        push!(to.edges, edge)
+
+        if isRequired(edge)
+            push!(requireds, edge)
+            push!(from.requireds, edge)
+            push!(to.requireds, edge)
+        end
     end
 
     vehicles = values[i]
