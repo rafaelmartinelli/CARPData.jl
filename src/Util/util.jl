@@ -5,3 +5,11 @@ function Base.show(io::IO, data::Data)
     print(io, " $(length(data.requireds)) reqs)")
     print(io, " [$(data.lb), $(data.ub)]")
 end
+
+function Base.show(io::IO, vertex::Vertex)
+    print(io, "v$(vertex.id)")
+end
+
+function Base.show(io::IO, edge::Edge)
+    print(io, "e($(edge.from.id), $(edge.to.id))")
+end

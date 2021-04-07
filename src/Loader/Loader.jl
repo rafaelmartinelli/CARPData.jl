@@ -1,7 +1,8 @@
 include("../Data/Data.jl")
 
-function load(file_name::String)
-    name = replace(replace(file_name, r".*/" => ""), r"\..*" => "")
+function load(instance::Symbol)
+    name = string(instance)
+    file_name = joinpath(data_path, name * ".dat")
 
     values = parse.(Int64, split(read(file_name, String)))
 
