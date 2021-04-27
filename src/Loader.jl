@@ -1,4 +1,4 @@
-include("../Data/Data.jl")
+include("Data.jl")
 
 function load(instance::Symbol)
     name = string(instance)
