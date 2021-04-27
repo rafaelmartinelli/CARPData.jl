@@ -64,7 +64,7 @@ There are some other instances (`A` and `B`), but I could not find their origin 
 
 For example, to load `kshs1.dat`, you can do:
 ```julia
-tsp = load(:kshs1)
+data = load(:kshs1)
 ```
 
 Known issues:
