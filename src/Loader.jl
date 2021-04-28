@@ -1,10 +1,19 @@
 include("Data.jl")
 
 function load(instance::Symbol)
-    name = string(instance)
-    file_name = joinpath(data_path, name * ".dat")
+    instance = replace(string(instance), "_" => "-")
+    file_name = joinpath(data_path, instance * ".dat")
+    return load(file_name)
+end
+
+function load(file_name::AbstractString)
+    if !isfile(file_name)
+        println("Error loading file ", file_name)
+        return nothing
+    end
 
     values = parse.(Int64, split(read(file_name, String)))
+    name = splitext(basename(file_name))[1]
 
     n = values[1]
     vertices = Vector{Vertex{Edge}}()
