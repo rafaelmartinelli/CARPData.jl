@@ -7,7 +7,7 @@ struct Data
     capacity::Int64
     vehicles::Int64
 
-    vertices::Vector{Vertex{Edge}}
+    vertices::Vector{Vertex}
     edges::Vector{Edge}
     requireds::Vector{Edge}
 

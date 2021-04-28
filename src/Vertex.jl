@@ -1,4 +1,4 @@
-struct Vertex{T}
+struct BaseVertex{T}
     id::Int64
 
     edges::Vector{T}

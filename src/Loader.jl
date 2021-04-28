@@ -16,9 +16,9 @@ function load(file_name::AbstractString)
     name = splitext(basename(file_name))[1]
 
     n = values[1]
-    vertices = Vector{Vertex{Edge}}()
+    vertices = Vector{Vertex}()
     for v in 1:n
-        push!(vertices, Vertex{Edge}(v, Vector{Edge}(), Vector{Edge}()))
+        push!(vertices, Vertex(v, Vector{Edge}(), Vector{Edge}()))
     end
 
     m = values[2]
