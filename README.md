@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/rafaelmartinelli/CARPData.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/rafaelmartinelli/CARPData.jl/actions/workflows/CI.yml)
 [![codecov](https://codecov.io/gh/rafaelmartinelli/CARPData.jl/branch/main/graph/badge.svg?token=EQ9U5IXGN0)](https://codecov.io/gh/rafaelmartinelli/CARPData.jl)
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
 This package reads `.dat` data files in a custom format for Capacitated Arc Routing Problem (CARP) instances and returns `Data` type:
 
