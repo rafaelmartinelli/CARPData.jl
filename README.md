@@ -73,8 +73,11 @@ data = load(:egl_e2_A)
 ```
 Julia symbols do not allow `-`.
 
+For custom CARP files, you must use the custom instance format. Check the `README` in the data directory for instructions.
+```julia
+data = load("path/to/my/instance.ext")
+```
+
 Related links:
 - https://www.uv.es/belengue/carp.html
 - http://dimacs.rutgers.edu/programs/challenge/vrp/carp/
-
-For custom CARP files, you must use my custom instance format. Check the `README` in the data directory for instructions.
