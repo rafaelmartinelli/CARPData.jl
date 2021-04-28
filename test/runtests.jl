@@ -72,6 +72,6 @@ end
 end
 
 @testset "Load string" begin
-    data = load("CARPData/data/kshs1.dat")
+    data = load(joinpath(@__DIR__, "../data/kshs1.dat"))
     @test data !== nothing
 end

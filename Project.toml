@@ -1,7 +1,10 @@
 name = "CARPData"
 uuid = "127a102c-159b-48d6-87e1-a656ac5f01e7"
 authors = ["Rafael Martinelli <martinelli@puc-rio.br>"]
-version = "0.1.1"
+version = "0.1.0"
+
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 
 [compat]
 julia = "1"
