@@ -1,5 +1,8 @@
 # CARPData.jl
 
+[![CI](https://github.com/rafaelmartinelli/CARPData.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/rafaelmartinelli/CARPData.jl/actions/workflows/CI.yml)
+[![codecov](https://codecov.io/gh/rafaelmartinelli/CARPData.jl/branch/main/graph/badge.svg?token=EQ9U5IXGN0)](https://codecov.io/gh/rafaelmartinelli/CARPData.jl)
+
 This package reads `.dat` data files in a custom format for Capacitated Arc Routing Problem (CARP) instances and returns `Data` type:
 
 ```julia
