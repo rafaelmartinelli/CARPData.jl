@@ -61,6 +61,16 @@ end
     @test length(data.requireds) == 347
 end
 
+@testset "other" begin
+    data = load(:A10A)
+    @test data.lb == 80
+    @test data.ub == 93
+    @test data.name == "A10A"
+    @test length(data.vertices) == 10
+    @test length(data.edges) == 15
+    @test length(data.requireds) == 11
+end
+
 @testset "Load string" begin
     data = load("CARPData/data/kshs1.dat")
     @test data !== nothing
