@@ -1,5 +1,3 @@
-include("Data.jl")
-
 function load(instance::Symbol)
     instance = replace(string(instance), "_" => "-")
     file_name = joinpath(data_path, instance * ".dat")

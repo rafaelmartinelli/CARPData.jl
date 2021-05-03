@@ -1,6 +1,3 @@
-include("Vertex.jl")
-include("Edge.jl")
-
 struct Data
     name::String
 

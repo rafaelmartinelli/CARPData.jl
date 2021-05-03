@@ -74,4 +74,16 @@ end
 @testset "Load string" begin
     data = load(joinpath(@__DIR__, "../data/kshs1.dat"))
     @test data !== nothing
+    data = load("not a file")
+    @test data === nothing
+end
+
+@testset "Base.show methods" begin
+    data = load(:kshs3)
+    show(stderr, data)
+    print("\n")
+    show(stderr, data.edges[1])
+    print("\n")
+    show(stderr, data.vertices[1])
+    print("\n")
 end
